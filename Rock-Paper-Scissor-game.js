@@ -66,8 +66,8 @@ if (score==="lose") {
     your score ${playerScore} `) 
      
    }else if(score==="win"){
-      console.log(`your score: ${compScore}
-       comp score: ${playerScore+=1}`)
+      console.log(`your score:  ${playerScore+=1}
+       comp score: ${compScore}`)
    }
    else if (score==="tie") {
       console.log(`comp score ${compScore} 
