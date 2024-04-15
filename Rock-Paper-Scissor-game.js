@@ -20,6 +20,10 @@ function decideWinner (computerSelection, playerSelection) {
             computerSelection==="paper"&& playerSelection==="scissor"){
                 return "win";
             }
+        
+           else if ( playerSelection===null&&computerSelection===computerSelection) {
+            return "null"
+           }
             else {
                return "invalid"
             }
@@ -45,7 +49,11 @@ you tied`
      return `you: ${playerSelection} - comp: ${computerSelection} 
   you win`
   }
-
+ 
+  else if (result==="null") {
+   return "input is null"
+  }
+ 
   else {
      return "invalid input!"
   }
@@ -74,13 +82,16 @@ return getComputerChoice
 
 }
 
-let input = prompt("rock, paper or scissor")
+let input = prompt("rock, paper or scissor") 
+if (input===null){
+ playerSelection = input;}
+ else{playerSelection=input.toLowerCase()}
 
-let playerSelection = input.toLowerCase();
 
+ 
 const computerSelection = getComputerChoice();
 
-console.log(playRound(computerSelection,playerSelection));
+console.log(playRound(computerSelection, playerSelection));
 
 const score = decideWinner(computerSelection, playerSelection)
 
@@ -100,6 +111,7 @@ const score = decideWinner(computerSelection, playerSelection)
      }
 
 }
+     
 if (compScore>playerScore){
      console.log("you lose the game ):")
 } 
@@ -107,9 +119,12 @@ else if (compScore<playerScore) {
      console.log("you win the game (:")
 }
 
-else if (compScore===playerScore) {
+else if (compScore>0&&playerScore>0&&compScore===playerScore) {
      console.log("you tied! play again?")
 }
 
+else {
+   console.log("BYE!")
+}
  }
   game()
