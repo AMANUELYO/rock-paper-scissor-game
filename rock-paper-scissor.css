@@ -20,14 +20,7 @@ h2{
     
       
 }
-#container{
-    
-  display: flex;
-  padding-top: 20px;
-  justify-content: space-around;
-  
-  padding-bottom: 30px;
-}
+
 
 .restartBtn{
   display: flex;
@@ -132,4 +125,20 @@ border-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(75, 75, 73);
   font-weight: bold;
+}
+
+.btnContainer{
+  
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+}
+#container{
+  display: flex;
+  justify-content: space-around;
+  
+width: 350px;
 }
