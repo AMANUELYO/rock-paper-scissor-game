@@ -7,6 +7,8 @@ const txt = document.querySelector("#txt")
 const secTxt = document.querySelector("#secondTxt")
 const thirdTxt = document.querySelector("#thirdTxt");
 const restartBtn = document.querySelector("#restartBtn");
+const playerImg = document.querySelector("#playerImg");
+const compImg = document.querySelector("#compImg");
 
 
 let option = ["rock","paper", "scissor"]
@@ -34,6 +36,19 @@ function decideWinner (computerSelection, playerSelection) {
             }
         
         
+
+}
+function getPic (computerSelection,playerSelection) {
+  if(playerSelection=="rock"){
+   return "player rock img"
+  }
+  else if(playerSelection=="paper"){
+   return "player paper img"
+  }
+   else if (playerSelection=="scissor"){
+      return "player scissor img"
+
+   }
 
 }
 
@@ -108,24 +123,57 @@ function game () {
     txt.textContent="",
      secTxt.textContent="",
    
-     thirdTxt.textContent=`you lose the game, press the restart button to play again.
-     your final score: ${playerScore} - comp final score: ${compScore}` 
+     thirdTxt.textContent=`you lose the game, 
+     press the restart button
+      to play again.
+     your final score: ${playerScore} -
+      comp final score: ${compScore}` 
      , compScore ==  0, playerScore == 0
  }
  else if (fSoccer=="game win") {
     txt.textContent="",
   secTxt.textContent="",
  
-  thirdTxt.textContent=`you win the game,press the restart button to play again. 
-  your final score: ${playerScore} - comp final score: ${compScore}` , 
+  thirdTxt.textContent=`you win the game,
+  press the restart button
+   to play again. 
+  your final score: ${playerScore} - 
+  comp final score: ${compScore}` , 
   compScore=0,playerScore=0
 
  }
+
+ const pic =  (getPic (computerSelection,playerSelection))
+
+ if (pic=="player rock img") {
+    playerImg.src = "image-dir/rock.png"
+ }  else if(pic== "player paper img") {
+   playerImg.src = "image-dir/paper.png"
+ }else if (pic == "player scissor img") {
+   playerImg.src = "image-dir/scissor.png"
+ }
+ 
+ if (computerSelection=="rock") {
+   compImg.src = "image-dir/rock.png"
+}  else if(computerSelection== "paper") {
+  compImg.src = "image-dir/paper.png"
+}else if (computerSelection == "scissor") {
+  compImg.src = "image-dir/scissor.png"
+}
+
+
+  
+
+
+ 
 
  restartBtn.addEventListener("click",function(){
     thirdTxt.textContent = ""
     txt.textContent = ""
     secTxt.textContent = ""
+    playerImg.src = ""
+    compImg.src = ""
+    
 
     compScore=0,
     playerScore=0

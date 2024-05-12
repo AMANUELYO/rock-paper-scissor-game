@@ -1,0 +1,135 @@
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+ 
+
+h2{
+    display: flex;
+   font-style: oblique;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: xx-large;
+   color: rgb(99, 99, 97);
+    
+    justify-content: center;
+    padding: 150px 0 180px 0;
+    margin: 0;
+    background-image: url(image-dir/images.jpeg) ;
+    text-decoration: overline;
+    
+      
+}
+#container{
+    
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-around;
+  
+  padding-bottom: 30px;
+}
+
+.restartBtn{
+  display: flex;
+  
+  padding: 10px ;
+  justify-content: center;
+}
+
+.h3{
+  display: flex;
+  
+  justify-content: center;
+  background-color: rgba(39,1,114,255);
+}
+
+h3{
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size:large;
+   color: rgb(99, 99, 97);
+}
+
+.txts{
+  display: flex;
+  border: 2px solid rgba(39,1,114,255);
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 380px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 40px;
+}
+.txtsCont{
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.txt,.secondTxt,.thirdTxt{
+  text-align: center;
+}
+
+.firstImg,.secondImg {
+  border: 2px solid rgba(39,1,114,255);
+  border-radius: 40px;
+  display: flex;
+  height: 270px;
+  width: 200px;
+  justify-content:center ;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+ 
+#compImg,#playerImg{
+  height: 200px;
+  width: 280;
+}
+
+h4{
+  text-align: center;
+  color:rgba(39,1,114,255);
+  font-style: oblique;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: large;
+
+}
+.allContainer {
+  background-color: rgba(46,46,46,255);
+}
+
+#restartBtn,#btn1,#btn2{
+  border-radius: 5px;
+  width:70px;
+  color: white;
+  background-color:rgba(39,1,114,255) ;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+border-color: white;
+}
+#btn3{
+  border-radius: 5px;
+  width:80px; 
+  color: white;
+  background-color:rgba(39,1,114,255);
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-color: white;
+  
+}
+
+#btn1:hover,#btn2:hover,#btn3:hover,#restartBtn:hover{
+  color:rgba(39,1,114,255);
+  background-color: white;
+  transition: 0.5s;
+  border-color:rgba(39,1,114,255) ;
+}
+
+#txt,#secondTxt,#thirdTxt{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(75, 75, 73);
+  font-weight: bold;
+}
